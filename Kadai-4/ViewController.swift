@@ -1,19 +1,16 @@
-//
-//  ViewController.swift
-//  Kadai-4
-//
-//  Created by 鈴木淳子 on 2021/11/17.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet private weak var countLabel: UILabel!
+    var countInt = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction private func addButtonTapped(_ sender: Any) {
+        countInt += 1
+        countLabel.text = String(countInt)
     }
 
-
+    @IBAction private func clearButtonTapped(_ sender: Any) {
+        countInt = 0
+        countLabel.text = String(countInt)
+    }
 }
-
