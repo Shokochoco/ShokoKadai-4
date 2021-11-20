@@ -2,19 +2,19 @@ import UIKit
 
 final class ViewController: UIViewController {
     @IBOutlet private weak var countLabel: UILabel!
-    private var countInt = 0
+    private var count = 0
 
     @IBAction private func addButtonTapped(_ sender: Any) {
-        countInt += 1
-        countEdit()
+        count += 1
+        updateCountLabel()
     }
 
     @IBAction private func clearButtonTapped(_ sender: Any) {
-        countInt = 0
-        countEdit()
+        count = 0
+        updateCountLabel()
     }
 
-    private func countEdit() {
-        countLabel.text = String(countInt)
+    private func updateCountLabel() {
+        countLabel.text = String(count)
     }
 }
